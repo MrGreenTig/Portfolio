@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space for change.</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="sphere-left"></div>
+    <header>
+        <div class="header">
+            <p data-i18n="subtitle" class="subtitle">From concept to code.</p>
+            <h1 data-i18n="name" id="name">Tigran Markariants</h1>
+            <p data-i18n="description" class="description">Confidential. Precise. No fluff.</p>
+        <div style="text-align: center;" class="no-print">
+            <button onclick="setLanguage('en')" class="language-button">EN</button>
+            <button onclick="setLanguage('ru')" class="language-button">RU</button>
+            <button onclick="setLanguage('ja')" class="language-button">日本語</button>
+        </div>
+
+    </header>
+
+    <main>
+        <section id="about">
+            <div class="container">
+                <div class="about">
+                    <div class="about-content">
+                        <img src="My.jpeg" alt="Фото специалиста">
+                    </div>
+                   
+                    <p class="about-intro" data-i18n="bio">
+                    An IT college student and aspiring web developer with an internship.
+                    I am studying the full cycle of creating web applications from frontend to backend.
+                    I have worked with HTML, CSS, JavaScript and Node.js.
+                    I have basic experience with MongoDB, Postman and the Jira system.
+                    I am open to new knowledge and ready to develop both in the direction of development and in the direction of DevOps.
+                    </p>
+            <div class="tb">
+            <table >
+                    <thead>
+                        <tr>
+                            <th > </th>
+                            <th >Contacts:</th>
+                        </tr>
+                    </thead>
+                        <tbody>
+                            <tr>
+                                <td ><strong>Email:</strong></td>
+                                <td ><a href="mailto:fina202418@st.forum.ac.jp">fina202418@st.forum.ac.jp</code></a></td>
+                            </tr>
+                            <tr>
+                                <td ><strong>LinkedIn:</strong></td>
+                                <td ><a href="https://www.linkedin.com/in/tigranmark/">linkedin.com/in/tigranmark</code></a></td>
+                            </tr>
+                            <tr>
+                                <td ><strong>GitHub:</strong></td>
+                                <td ><a href="https://github.com/MrGreeeeeeeen">github.com/MrGreeeeeeeen</code></a></td>
+                            </tr>
+                            <!--<tr>
+                            <td style="text-align: left"><strong>Telegram:</strong></td>
+                            <td style="text-align: left"><a href="https://t.me/infik/"><code class="language-plaintext highlighter-rouge">@infik</code></a></td>
+                            </tr>-->
+                        </tbody>
+                </table>
+            </div>
+
+                </div>
+                <div class="about-education">
+                    <div class="education-block">
+                        <h3 data-i18n="Education and Professional">Education and Professional Development</h3>
+                        <h4 data-i18n="skills">Skills:</h4>
+                        <ul>
+                            <li><strong>Frontend:</strong> HTML, CSS, JavaScript (basic), React (beginner)</li>
+                            <li><strong>Backend:</strong> Node.js, Express (basics), Python, PHP (a little), Django (superficial)</li>
+                            <li><strong>DB:</strong> MongoDB (Compass, Atlas), MySQL (basics)</li>
+                            <li><strong>Dev Tools:</strong> Git, Postman, Jira, VS Code</li>
+                            <li><strong>Other:</strong> AJAX basics, basic understanding of REST, working with JSON</li>
+                        </ul>
+                                              <h4 data-i18n="Education">Education:</h4>
+                        <ul>
+                            <li data-i18n="challenge_1">create pages using HTML and CSS</li>
+                            <li data-i18n="challenge_2">write basic scripts in JavaScript</li>
+                            <li data-i18n="challenge_3">create simple REST APIs on Node.js and Express</li>
+                            <li data-i18n="challenge_4">work with MongoDB via Compass and Atlas</li>
+                            <li data-i18n="challenge_5">test APIs using Postman</li>
+                            <li data-i18n="challenge_6">have some knowledge of PHP, Python, React, Django, AJAX</li>
+                            <li data-i18n="challenge_7">managed tasks in Jira, participated in team development</li>
+                            <li data-i18n="challenge_8">Telegram Bots</li>
+                            <li data-i18n="challenge_9">VS Code, GitHub</li>
+                        </ul>
+                        <h2 data-i18n="portfolio">Portfolio:</h2>
+                        <p data-i18n="portfolio_status"><strong>Not yet</strong></p>
+
+                        <h4 data-i18n="languages">Languages:</h4>
+                        <ul>
+                            <li data-i18n="lang_ru">Russian (Native)</li>
+                            <li data-i18n="lang_jp">日本語 (N4~N3)</li>
+                            <li data-i18n="lang_en">English (Intermediate / A2-B1)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <h2>Sign up for a consultation</h2>
+               <form action="https://formspree.io/f/xyzwneaa" method="POST" id="consultation-form">
+                    <span class="close">×</span>
+                    <input type="text" name="name" placeholder="Your name" required>
+                    <input type="email" name="email" placeholder="Your email" required>
+                    <textarea name="message" placeholder="Your message" required></textarea>
+                    <button type="submit">Send it</button>
+                </form>
+                <div class="social-links">
+                    <a href="#" class="social-icon" id="t"><i class="fab fa-telegram-plane"></i></a>
+                    <a href="#" class="social-icon" id="wa"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="social-icon" id="ph"><i class="fas fa-phone"></i></a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="info">
+                <p>Create by Mr.Green:</p>
+                <a href="https://t.me/+79526664422" target="_blank">
+                    <img src="MyFooter.jpeg" alt="Фото специалиста">
+                </a>
+                <p>© 2025 All rights reserved.</p>
+            </div>
+            <div class="footer-row social-links">
+                <a href="#" class="social-icon" id="t"><i class="fab fa-telegram-plane"></i></a>
+                <a href="#" class="social-icon" id="wa"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" class="social-icon" id="ph"><i class="fas fa-phone"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
