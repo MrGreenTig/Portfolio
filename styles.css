@@ -37,7 +37,6 @@ header {
     position: relative;
     overflow: hidden;
     min-height: 100px;
-    max-height: 2vh;
 }
 
 header h1 {
