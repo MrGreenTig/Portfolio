@@ -646,6 +646,7 @@ a:not(footer a):not(.social-icon) {
   border-radius: 8px;
   box-shadow: inset 0 4px 6px rgba(0,0,0,0.6);
   transition: all 0.2s ease;
+   
 }
 
 a:hover:not(footer a):not(.social-icon) {
@@ -666,6 +667,7 @@ a:hover:not(footer a):not(.social-icon) {
   transition: all 0.2s ease;
   font-size: 16px;
   text-align: center;
+    min-height: 44px;
 }
 
 .language-button:hover {
