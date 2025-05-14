@@ -77,10 +77,27 @@ function animateGradient(element) {
 }
 
 
+// Сохраняем оригинальные тексты
 const originalTexts = {};
 
 async function setLanguage(lang) {
-  // Если язык английский, восстанавливаем оригинальные тексты
+  // Воспроизведение звука
+  const audio = document.getElementById("click-sound");
+
+  if (lang === 'ja') {
+    audio.src = "music/FM.mp3";
+  } else if (lang === 'en') {
+    audio.src = "music/en.mp3";
+  } else if (lang === 'ru') {
+    audio.src = "music/ru.mp3";
+  }
+
+  audio.volume = 0.1;
+  audio.play();
+
+  console.log("Выбран язык:", lang);
+
+  // Перевод на английский — восстановление оригинальных текстов
   if (lang === 'en') {
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
@@ -92,7 +109,7 @@ async function setLanguage(lang) {
     return;
   }
 
-  // Иначе — загружаем перевод
+  // Иначе — загружаем перевод из JSON
   try {
     const res = await fetch(`lang/${lang}.json`);
     const translation = await res.json();
@@ -100,7 +117,6 @@ async function setLanguage(lang) {
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
 
-      // Сохраняем оригинальный текст один раз
       if (!originalTexts[key]) {
         originalTexts[key] = el.textContent;
       }
@@ -114,28 +130,5 @@ async function setLanguage(lang) {
   } catch (error) {
     console.error('Ошибка загрузки перевода:', error);
   }
-}
-
-// Установить язык при загрузке
-window.addEventListener('DOMContentLoaded', () => {
-  const savedLang = localStorage.getItem('lang') || 'en';
-  setLanguage(savedLang);
-});
-
- // Воспроизведение звука при нажатии на кнопку:<script>
-function setLanguage(lang) {
-  const audio = document.getElementById("click-sound");
-
-  if (lang === 'ja') {
-    audio.src = "music/FM.mp3";
-  } else if (lang === 'en') {
-    audio.src = "music/en.mp3";
-  } else if (lang === 'ru') {
-    audio.src = "music/ru.mp3";
-  }
-  audio.volume = 0.1;
-  audio.play();
-
-  console.log("Выбран язык:", lang);
 }
 
