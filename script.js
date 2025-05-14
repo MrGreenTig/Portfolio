@@ -121,3 +121,21 @@ window.addEventListener('DOMContentLoaded', () => {
   const savedLang = localStorage.getItem('lang') || 'en';
   setLanguage(savedLang);
 });
+
+ // Воспроизведение звука при нажатии на кнопку:<script>
+function setLanguage(lang) {
+  const audio = document.getElementById("click-sound");
+
+  if (lang === 'ja') {
+    audio.src = "music/FM.mp3";
+  } else if (lang === 'en') {
+    audio.src = "music/en.mp3";
+  } else if (lang === 'ru') {
+    audio.src = "music/ru.mp3";
+  }
+  audio.volume = 0.1;
+  audio.play();
+
+  console.log("Выбран язык:", lang);
+}
+
