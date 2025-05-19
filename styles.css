@@ -63,24 +63,25 @@ header h1 {
 .tb {
 
     text-align: center;
-    margin: 0 auto; /* классический способ */
+    margin: 0 auto;
     border-collapse: collapse;
 }
 .tb table {
-  margin: 0 auto; /* классический способ */
+  margin: 0 auto;
   border-collapse: collapse;
 }
 /*Модальное окно*/
 #modal {
-    display: none;
     position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.4);
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
 }
 
 .modal-content {
@@ -152,8 +153,8 @@ header h1 {
     transition: background-color 0.3s ease; /
 }
 #consultation-form button:hover {
-    background-color: #7dea80c9; /* Зеленый цвет при наведении */
-    color: white; /* Изменяем цвет текста на белый для лучшей читаемости */
+    background-color: #7dea80c9;
+    color: white; 
 }
 
 #consultation-form .close {
@@ -165,10 +166,14 @@ header h1 {
 }
 .about {
     padding-top: 15px;
-    background-color: #f9f9f9;
-
+    background-color: #f9f9f9; 
+    padding-left: 55px;
+    padding-right: 15px; 
+    box-sizing: border-box; 
 }
+
 .container {
+    
     width: 100%;
     max-width: 100%;
     padding-left: 15px;
@@ -194,7 +199,6 @@ img {
     -khtml-user-drag: none;
     -moz-user-drag: none;
     -o-user-drag: none;
-    margin-left: 40px;
 }
 
 
@@ -209,7 +213,7 @@ img {
 }
 /*about*/
 .about-header {
-    flex: 0 0 48%; /* Занимает 48% ширины контейнера */
+    flex: 0 0 48%; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -221,8 +225,8 @@ img {
 }
 
 .about-education {
-    flex: 0 0 50%; /* Занимает 50% ширины контейнера */
-    margin-left: 4%; /* Отступ между блоками */
+    flex: 0 0 50%; 
+    margin-left: 4%; 
     margin-right: 4%;
 }
 
@@ -230,7 +234,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto; /* классический способ */
+    margin: 0 auto; 
     border-collapse: collapse;
 }
 
@@ -310,37 +314,45 @@ img {
 
 /*Ярлык для заказов*/
 #serviceLabel {
-    width: 15px;
-    height: 210px;
+   
+    padding: 15px 10px;
+    min-height: 50px; 
+    min-width: 15px;
+
     font-family: var(--primary-font);
     font-optical-sizing: auto;
-    font-weight: weight;
     font-style: normal;
-    font-variation-settings: "BNCE" 0,"INFM" 0,"SPAC" 0;  
+    font-variation-settings: "BNCE" 0,"INFM" 0,"SPAC" 0;
     font-size: 15px;
     font-weight: bold;
+
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.201);
     cursor: pointer;
     position: fixed;
     left: -5px;
     top: 35%;
     z-index: 1000;
-    padding: 15px 10px;
+
     border-radius: 0 20px 20px 0;
     color: white;
+
     writing-mode: vertical-rl;
     text-orientation: mixed;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    white-space: nowrap;
+
 }
 #serviceLabel:hover {
-    transform: translateX(5px); /* Слегка выдвигается при наведении */
+    transform: translateX(5px); 
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 #serviceLabel:active {
-    transform: translateX(-5); /* Возвращается обратно при клике */
+    transform: translateX(0); 
 }
 #serviceLabel .close {
     position: absolute;
@@ -561,8 +573,9 @@ footer .social-icon:hover {
         font-size: 0.9rem;
     }
 }
-/*896px*/
-@media (max-width: 896px) {
+/*1260px*/
+@media (max-width: 1260px) {
+    
     .container {
         flex-direction: column;
         align-items: center;
@@ -570,7 +583,7 @@ footer .social-icon:hover {
 
     .about-header,
     .about-education {
-         flex: 0 0 50%;
+        flex: 0 0 50%;
         max-width: 95%;
         margin-left: auto;
         margin-right: auto;
@@ -582,32 +595,34 @@ footer .social-icon:hover {
 
     .education-block {
         width: 90%;
-        margin: 15px auto; /* Добавляем одинаковые отступы сверху и снизу */
-        padding: 20px; /* Уменьшаем внутренние отступы для мобильных устройств */
+        margin: 15px auto; 
+        padding: 20px;
+        
     }
 
     .education-block h3 {
         width: 100%;
-        margin-bottom: 15px; /* Добавляем отступ снизу для заголовка */
+        margin-bottom: 15px; 
         font-size: 18pt;
         text-align: center;
         
     }
 
     .education-block h4 {
-        margin-top: 15px; /* Добавляем отступ сверху для подзаголовков */
+        margin-top: 15px; 
         margin-bottom: 10px;
     }
 
     .education-block p,
     .education-block ul {
         width: 100%;
-        margin-bottom: 15px; /* Добавляем отступ снизу для параграфов и списков */
+        margin-bottom: 15px; 
     }
 
     .education-block ul li {
-        margin-bottom: 10px; /* Уменьшаем отступ между элементами списка */
+        margin-bottom: 10px; 
     }
+   
 }
 
 /*keyframes*/
@@ -627,19 +642,12 @@ footer .social-icon:hover {
     100% { background-position: 0% 50%; }
 }
 
-@keyframes colorfulShadow {
-    0% { box-shadow: 0 0 20px rgba(255, 0, 0, 0.8); }
-    25% { box-shadow: 0 0 20px rgba(0, 255, 0, 0.8); }
-    50% { box-shadow: 0 0 20px rgba(0, 0, 255, 0.8); }
-    75% { box-shadow: 0 0 20px rgba(255, 255, 0, 0.8); }
-    100% { box-shadow: 0 0 20px rgba(255, 0, 0, 0.8); }
-}
-a:not(footer a):not(.social-icon) {
+a:not(footer a):not(.social-icon):not(.screenshot a) {
   display: inline-block;
-  width: 240px; /* задаёт одинаковую ширину */
-  text-align: center; /* выравнивание текста */
+  width: 240px; 
+  text-align: center; 
   color: #fff;
-  background: #4a4e69;
+  background: #1d1f299c;
   padding: 10px 20px;
   text-decoration: none;
   font-weight: 600;
@@ -649,8 +657,8 @@ a:not(footer a):not(.social-icon) {
    
 }
 
-a:hover:not(footer a):not(.social-icon) {
-  box-shadow: inset 0 2px 4px rgba(0,0,0,0.9);
+a:hover:not(footer a):not(.social-icon):not(.screenshot a) {
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.9);
 }
 .language-button {
   display: inline-block;
@@ -667,7 +675,7 @@ a:hover:not(footer a):not(.social-icon) {
   transition: all 0.2s ease;
   font-size: 16px;
   text-align: center;
-    min-height: 44px;
+  min-height: 44px;
 }
 
 .language-button:hover {
@@ -675,3 +683,227 @@ a:hover:not(footer a):not(.social-icon) {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   transform: translateY(-2px);
 }
+
+/*Подсветка кнопок*/
+.language-button.active-lang {
+  background-color: #007BFF;
+  color: white;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.6);
+}
+
+/*Portfolio*/
+.portfolio-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  transition: transform 0.3s ease;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+.portfolio-card:hover {
+  transform: scale(1.03);
+}
+
+.portfolio-card h3 {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+  color: var(--primary-font);
+}
+
+
+
+.screenshot a {
+  display: block;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.screenshot a:hover {
+  transform: scale(1.02);
+}
+
+.screenshot img {
+  width: 100%;
+  height: auto;
+  max-height: 140px;
+  object-fit:cover;
+  display: block;
+}
+
+.project-link {
+  margin-top: 0.8rem;
+  display: inline-block;
+  background-color: #007BFF;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.project-link:hover {
+  background-color: #0056b3;
+}
+
+/*Прокрутка в портфолио <>*/
+.portfolio-wrapper {
+  position: relative;
+  width: 100%;
+  max-width:750px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.portfolio-slider {
+  display: flex;
+  overflow: hidden;
+  gap: 16px;
+  width: 100%;
+  
+}
+
+
+.arrow {
+  background-color: #06060625;
+  border: none;
+  color: rgb(255, 255, 255);
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  width: 40px;
+}
+
+.arrow:hover {
+  background-color: #292e337b;
+}
+
+/* Пиктограммы html css js json*/
+.made-with {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  margin-top: 10px;
+}
+
+.html-icon {
+  color: #e44d26;
+}
+
+.css-icon {
+  color: #264de4;
+}
+
+.js-icon {
+  color: #f0db4f;
+}
+
+.json-icon {
+  color: #6e6e6e;
+}
+
+.made-with i {
+  transition: transform 0.3s ease;
+}
+
+.made-with i:hover {
+  transform: scale(1.2);
+}
+
+
+
+/* Тёмная тема */
+
+.dark-theme,
+.head.dark-theme,
+.about-content.dark-theme,
+.education-block.dark-theme,
+.container.dark-theme,
+.body.dark-theme,
+header.dark-theme,
+footer.dark-theme,
+.about-content.dark-theme,
+.education-block.dark-theme {
+    background-color: #121212;
+    color: #e0e0e0;
+    
+}
+/* Специфичные стили для header и footer в темной теме */
+header.dark-theme {
+    background:#000000; 
+    color: #e0e0e0; 
+}
+
+footer.dark-theme {
+    background: #000000;
+    color: #e0e0e0; 
+}
+
+.portfolio-card.dark-theme{
+    background-color: #000000; 
+    color: #e0e0e0;
+}
+.education-block.dark-theme {
+    background-color: #000000; 
+    color: #e0e0e0;
+}
+
+.theme-switch {
+    width: 35px;
+    height: 40px; 
+    font-family: var(--primary-font);
+    font-size: 15px;
+    font-weight: bold;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.201);
+    cursor: pointer;
+    position: fixed;
+    right: -5px; 
+    top: 35%;
+    z-index: 1000;
+    padding: 15px 10px;
+    border-radius: 20px 0 0 20px; 
+    color: rgb(255, 255, 255);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background:#0e080885;
+    border: none;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    animation: gradientShift 5s ease infinite, colorfulShadow 10s linear infinite;
+}
+
+.theme-switch:hover {
+    transform: translateX(-5px); 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.theme-switch:active {
+    transform: translateX(0); 
+}
+
+
+/* Стили для темной темы, если нужно изменить вид кнопки */
+.theme-switch.dark-theme {
+    background:#fefefebb; 
+    color: #12121288; 
+
