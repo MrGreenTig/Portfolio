@@ -4,10 +4,10 @@ document.addEventListener('DOMContentLoaded', function () {
   const slider = document.getElementById('slider');
   const prevBtn = document.getElementById('prevBtn');
   const nextBtn = document.getElementById('nextBtn');
-  let cards = []; // CHANGED: Was const, now let. Initialized empty.
+  let cards = []; 
   let currentIndex = 0;
   const gap = 16;
-  let visibleCards = getVisibleCards(); // Initial call is fine
+  let visibleCards = getVisibleCards(); 
   let cardWidth = 0;
 
   function getVisibleCards() {
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
     return 0;
   }
 
-  // NEW: Helper function to query slider cards from the DOM
+  // Helper function to query slider cards from the DOM
   function querySliderCards() {
     if (slider) {
       return Array.from(slider.querySelectorAll('.portfolio-card'));
@@ -24,15 +24,15 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function updateCardWidth() {
-    cards = querySliderCards(); // NEW: Re-query cards every time width is updated
-    if (cards.length > 0 && cards[0]) { // Ensure cards exist and cards[0] is accessible
+    cards = querySliderCards(); 
+    if (cards.length > 0 && cards[0]) { 
       cardWidth = cards[0].offsetWidth + gap;
     } else {
-      cardWidth = 0; // Default to 0 if no cards
+      cardWidth = 0; 
     }
   }
 
-  function updateSlider() { // Renamed for clarity, this function handles the scroll
+  function updateSlider() { 
     if (slider) {
       const offset = currentIndex * cardWidth;
       // Ensure offset is a number, default to 0 if cardWidth is 0 or results in NaN
@@ -41,8 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function nextSlide() {
-    cards = querySliderCards(); // NEW: Re-query cards before checking length
-    // visibleCards is updated by the resize listener.
+    cards = querySliderCards();
     if (currentIndex < cards.length - visibleCards) {
       currentIndex++;
       updateSlider();
@@ -58,18 +57,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Initial setup and event listeners
   if (slider) {
-    cards = querySliderCards();       // Initial population of cards
-    visibleCards = getVisibleCards(); // Ensure visibleCards is up-to-date
-    updateCardWidth();                // Calculate initial cardWidth based on current cards
-    updateSlider();                   // Set initial scroll position
+    cards = querySliderCards();       
+    visibleCards = getVisibleCards(); 
+    updateCardWidth();
+    updateSlider();
 
     nextBtn?.addEventListener('click', nextSlide);
     prevBtn?.addEventListener('click', prevSlide);
 
     window.addEventListener('resize', () => {
-      visibleCards = getVisibleCards(); // Update visible cards on resize
-      updateCardWidth();                // Re-calculate card width (this will also re-query cards)
-      
+      visibleCards = getVisibleCards();
+      updateCardWidth(); 
       // Adjust currentIndex if it becomes out of bounds after resize or card changes
       const maxPossibleIndex = Math.max(0, cards.length - visibleCards);
       if (currentIndex > maxPossibleIndex) {
@@ -157,7 +155,7 @@ async function setLanguage(lang, playSound = true) {
   }
 
   if (playSound) {
-    audio.volume = 0.1;
+    audio.volume = 0.03;
     audio.play();
   }
 
