@@ -10,62 +10,61 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <link rel="apple-touch-icon" sizes="180x180" href="fav/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="fav/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="fav//apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="fav//favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="fav/favicon-16x16.png">
+   
 </head>
-<body>
-    <div class="sphere-left"></div>
-    <header>
-        <div class="header">
-            <p data-i18n="subtitle" class="subtitle">From concept to code.</p>
-            <h1 data-i18n="name" id="name">Tigran Markariants</h1>
-            <p data-i18n="description" class="description">Confidential. Precise. No fluff.</p>
-        <div style="text-align: center;" class="no-print">
-            <button onclick="setLanguage('en')" class="language-button">EN</button>
-            <button onclick="setLanguage('ru')" class="language-button">RU</button>
-            <button onclick="setLanguage('ja')" class="language-button">日本語</button>
-        </div>
-        <audio id="click-sound">
-                <audio id="click-sound"></audio>
-        </audio>
-    </header>
 
+<body>
+           <header class="header">
+        <div class="sphere-left"></div>
+                <p data-i18n="subtitle" class="subtitle">From concept to code.</p>
+                <h1 data-i18n="name" id="name">Tigran Markariants</h1>
+                <p data-i18n="description" class="description">Confidential. Precise. No fluff.</p>
+        <div style="text-align: center;" class="no-print">
+            <button data-lang="en" class="language-button">EN</button>
+            <button data-lang="ru" class="language-button">RU</button>
+            <button data-lang="ja" class="language-button">日本語</button>
+
+        </div>
+    </header> 
+        <button class="theme-switch">🌙</button>
     <main>
         <section id="about">
             <div class="container">
                 <div class="about">
                     <div class="about-content">
-                        <img src="My.jpeg" alt="Фото специалиста">
+                        <img id="theme-image" src="pics/My.jpeg" alt="Фото специалиста" />
                     </div>
-                   
+                   <h3 data-i18n="About_me">About me:</h3>
                     <p class="about-intro" data-i18n="bio">
-                    An IT college student and aspiring web developer with an internship.
-                    I am studying the full cycle of creating web applications from frontend to backend.
-                    I have worked with HTML, CSS, JavaScript and Node.js.
-                    I have basic experience with MongoDB, Postman and the Jira system.
-                    I am open to new knowledge and ready to develop both in the direction of development and in the direction of DevOps.
+                    Before joining IT, I worked in sales and procurement, communicated with clients, solved organizational problems.
+                    This experience taught me to adapt to different situations, look for solutions and work with data.
+                    Since 2024, I have been studying web development: HTML, CSS, JavaScript, Node.js, MongoDB.
+                    I love creating clear and neat interfaces.
+                    I am looking for an opportunity to develop in IT and apply my skills on real projects.
                     </p>
             <div class="tb">
             <table >
                     <thead>
                         <tr>
                             <th > </th>
-                            <th >Contacts:</th>
+                            <th data-i18n="Contacts">Contacts:</th>
                         </tr>
                     </thead>
                         <tbody>
                             <tr>
                                 <td ><strong>Email:</strong></td>
-                                <td ><a href="mailto:fina202418@st.forum.ac.jp">fina202418@st.forum.ac.jp</code></a></td>
+                                <td ><a href="mailto:fina202418@st.forum.ac.jp">fina202418@st.forum.ac.jp</a></td>
                             </tr>
                             <tr>
                                 <td ><strong>LinkedIn:</strong></td>
-                                <td ><a href="https://www.linkedin.com/in/tigranmark/">linkedin.com/in/tigranmark</code></a></td>
+                                <td ><a href="https://www.linkedin.com/in/tigranmark/">linkedin.com/in/tigranmark</a></td>
                             </tr>
                             <tr>
                                 <td ><strong>GitHub:</strong></td>
-                                <td ><a href="https://github.com/MrGreeeeeeeen">github.com/MrGreeeeeeeen</code></a></td>
+                                <td ><a href="https://github.com/MrGreeeeeeeen">github.com/MrGreeeeeeeen</a></td>
                             </tr>
                             <!--<tr>
                             <td style="text-align: left"><strong>Telegram:</strong></td>
@@ -79,15 +78,17 @@
                 <div class="about-education">
                     <div class="education-block">
                         <h3 data-i18n="Education and Professional">Education and Professional Development</h3>
-                        <h4 data-i18n="skills">Skills:</h4>
+                        <h4 data-i18n="skills">Education&Skills:</h4>
                         <ul>
+                            <li data-i18n="Spec1"><strong>Japanese language school "Kanrin" 2022-2024</strong></li>
+                            <li data-i18n="Spec2"><strong>Forum Information Academy College 2024~Present</strong></li>
                             <li><strong>Frontend:</strong> HTML, CSS, JavaScript (basic), React (beginner)</li>
                             <li><strong>Backend:</strong> Node.js, Express (basics), Python, PHP (a little), Django (superficial)</li>
-                            <li><strong>DB:</strong> MongoDB (Compass, Atlas), MySQL (basics)</li>
+                            <li><strong>DataBase:</strong> MongoDB (Compass, Atlas), MySQL (basics)</li>
                             <li><strong>Dev Tools:</strong> Git, Postman, Jira, VS Code</li>
                             <li><strong>Other:</strong> AJAX basics, basic understanding of REST, working with JSON</li>
                         </ul>
-                                              <h4 data-i18n="Education">Education:</h4>
+                        <h4 data-i18n="Education">What tasks do I solve:</h4>
                         <ul>
                             <li data-i18n="challenge_1">create pages using HTML and CSS</li>
                             <li data-i18n="challenge_2">write basic scripts in JavaScript</li>
@@ -99,28 +100,74 @@
                             <li data-i18n="challenge_8">Telegram Bots</li>
                             <li data-i18n="challenge_9">VS Code, GitHub</li>
                         </ul>
-                        <h2 data-i18n="portfolio">Portfolio:</h2>
-                        <p data-i18n="portfolio_status"><strong>Not yet</strong></p>
+    <h4 data-i18n="Other">Other Education&Skills:</h4>
+<ul>
+    <li data-i18n="Edu1"><strong>Saint-Petersburg Institute of Economics and Management.</strong></li>
+    <li data-i18n="Spec"><strong>Specialization: Management</strong></li>
+    <li data-i18n="skill1">I know how to organize my working time and independently bring tasks to a result</li>
+    <li data-i18n="skill2">I approach tasks analytically</li>
+    <li data-i18n="skill3">Attentive to details</li>
+</ul>
+<div class="portfolio-container">
+    <h4 data-i18n="portfolio">Portfolio:</h4>
+    <div class="portfolio-wrapper">
+    <button class="arrow left" id="prevBtn">&lt;</button>
+    <div class="portfolio-slider" id="slider">
+        <div class="portfolio-card">
+        <h3 data-i18n="proj1">My page Project</h3>
+        <div class="screenshot">
+            <a href="https://mrgreeeeeeeen.github.io/Portfolio" target="_blank">
+            <img src="pics/portfolio.png" alt="Скриншот проекта">
+            </a>
+        </div>
+        <div class="made-with">
+            <i class="fab fa-html5 html-icon" title="HTML5"></i>
+            <i class="fab fa-css3-alt css-icon" title="CSS3"></i>
+            <i class="fab fa-js js-icon" title="JavaScript"></i>
+            <i class="fas fa-database json-icon" title="JSON"></i>
+        </div>
+        <a data-i18n="link" href="https://mrgreeeeeeeen.github.io/Portfolio" class="project-link" target="_blank">View Project</a>
+        </div>
 
+        <div class="portfolio-card">
+        <h3 data-i18n="proj2">Bakery shop Project</h3>
+        <div class="screenshot">
+            <a href="https://mrgreeeeeeeen.github.io" target="_blank">
+            <img src="pics/bakery.png" alt="Скриншот проекта">
+            </a>
+        </div>
+        <div class="made-with">
+            <i class="fab fa-html5 html-icon" title="HTML5"></i>
+            <i class="fab fa-css3-alt css-icon" title="CSS3"></i>
+            <i class="fab fa-js js-icon" title="JavaScript"></i>
+        </div>
+        <a data-i18n="link" href="https://mrgreeeeeeeen.github.io" class="project-link" target="_blank">View Project</a>
+        </div>
+
+        </div>
+    <button class="arrow right" id="nextBtn">&gt;</button>
+    </div>
+</div>
                         <h4 data-i18n="languages">Languages:</h4>
                         <ul>
                             <li data-i18n="lang_ru">Russian (Native)</li>
                             <li data-i18n="lang_jp">日本語 (N4~N3)</li>
                             <li data-i18n="lang_en">English (Intermediate / A2-B1)</li>
                         </ul>
+                        <audio id="click-sound"></audio>
                     </div>
                 </div>
             </div>
         </section>
         <div id="modal" class="modal">
             <div class="modal-content">
-                <h2>Sign up for a consultation</h2>
+                <h2 data-i18n="Sign_up">Sign up for a consultation</h2>
                <form action="https://formspree.io/f/xyzwneaa" method="POST" id="consultation-form">
                     <span class="close">×</span>
-                    <input type="text" name="name" placeholder="Your name" required>
-                    <input type="email" name="email" placeholder="Your email" required>
-                    <textarea name="message" placeholder="Your message" required></textarea>
-                    <button type="submit">Send it</button>
+                    <input type="text" name="name" placeholder="Your name" data-i18n-placeholder="your_name" required>
+                    <input type="email" name="email" placeholder="Your email" data-i18n-placeholder="your_email" required>
+                    <textarea name="message" placeholder="Your message" data-i18n-placeholder="your_message" required></textarea>
+                    <button data-i18n="Send_it" type="submit">Send it</button>
                 </form>
                 <div class="social-links">
                     <a href="https://t.me/infik" class="social-icon" id="t"><i class="fab fa-telegram-plane"></i></a>
@@ -131,17 +178,17 @@
         </div>
     </main>
 
-    <footer>
+    <footer class="footer">
         <div class="footer-content">
             <div class="info">
-                <p>Create by Mr.Green:</p>
+                <p data-i18n="Create">Create by Mr.Green:</p>
                 <a href="https://t.me/infik" target="_blank">
-                    <img src="MyFooter.jpeg" alt="Фото специалиста">
+                    <img id="theme-image2" src="pics/MyFooter.jpeg" alt="Фото специалиста" />
                 </a>
-                <p>© 2025 All rights reserved.</p>
+                <p data-i18n="rights">© 2025 All rights reserved.</p>
             </div>
-              <div class="footer-row social-links">
-                <a href="https://t.me/infik" class="social-icon" id="t"><i class="fab fa-telegram-plane"></i></a>
+            <div class="footer-row social-links">
+                 <a href="https://t.me/infik" class="social-icon" id="t"><i class="fab fa-telegram-plane"></i></a>
                 <a href="https://wa.me/77777777" class="social-icon" id="wa"><i class="fab fa-whatsapp"></i></a>
                 <a href="tel:+77777777" class="social-icon" id="ph"><i class="fas fa-phone"></i></a>
             </div>
@@ -151,4 +198,5 @@
     <script src="script.js"></script>
 </body>
 </html>
+
 
