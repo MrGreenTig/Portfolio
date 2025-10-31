@@ -12,7 +12,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function getVisibleCards() {
     if (window.innerWidth < 600) return 1;
-    return 0;
+    if (window.innerWidth < 1024) return 2;
+    return 3;
   }
 
   // Helper function to query slider cards from the DOM
@@ -42,7 +43,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function nextSlide() {
     cards = querySliderCards();
-    if (currentIndex < cards.length - visibleCards) {
+    const maxIndex = Math.max(0, cards.length - visibleCards);
+    if (currentIndex < maxIndex) {
       currentIndex++;
       updateSlider();
     }
