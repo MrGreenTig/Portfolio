@@ -85,16 +85,17 @@ header h1 {
 }
 
 .modal-content {
-    border-radius: 50%;
-    width: 350px;
-    height: 350px;
+    position: relative;
+    border-radius: 24px;
+    width: min(90vw, 360px);
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
     overflow: hidden;
-    padding-top: 18px;
+    padding: 24px 20px 20px;
 }
 
 .modal-content h2{
@@ -115,10 +116,11 @@ header h1 {
 .close {
     color: #fff;
     position: absolute;
-    right: 20px;
+    top: 12px;
+    right: 16px;
     font-weight: bold;
     cursor: pointer;
-    margin-top: -7px;
+    margin-top: 0;
     transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
 }
 
@@ -127,14 +129,14 @@ header h1 {
     color: #cc0000;
     text-decoration: none;
     cursor: pointer;
-    transform: translateY(56px);
+    transform: scale(1.05);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 #consultation-form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 80%;
+    width: 100%;
     position: relative;
 }
 #consultation-form input,
@@ -160,18 +162,17 @@ header h1 {
 }
 
 #consultation-form .close {
-    position: absolute;
-    top: -70px;
-    right: 130px;
+    top: 12px;
+    right: 16px;
     font-size: 24px;
     cursor: pointer;
 }
 .about {
     padding-top: 15px;
-    background-color: #f9f9f9; 
+    background-color: #f9f9f9;
     padding-left: 55px;
-    padding-right: 15px; 
-    box-sizing: border-box; 
+    padding-right: 15px;
+    box-sizing: border-box;
 }
 
 .container {
@@ -480,12 +481,48 @@ footer .social-icon:hover {
     .education-block ul li {
         font-size: 0.9rem;
     }
+
+    .portfolio-wrapper {
+        padding: 0 32px;
+    }
+
+    .portfolio-card {
+        flex: 0 0 90vw;
+        max-width: 90vw;
+    }
+
+    .arrow {
+        width: 36px;
+        height: 36px;
+        font-size: 1.5rem;
+    }
+
+    #serviceLabel,
+    .theme-switch {
+        top: auto;
+        bottom: 20px;
+        writing-mode: horizontal-tb;
+        text-orientation: mixed;
+        padding: 10px 16px;
+        border-radius: 24px;
+    }
+
+    #serviceLabel {
+        left: 16px;
+    }
+
+    .theme-switch {
+        right: 16px;
+        left: auto;
+        width: auto;
+        height: auto;
+    }
 }
 /*768px*/
 @media (max-width: 768px) {
     header {
         padding: 1vh 1vw;
-        max-width: 100%;  
+        max-width: 100%;
     }
     .education-block h3 {
         font-size: 1.5rem;
@@ -502,6 +539,25 @@ footer .social-icon:hover {
     .education-block p,
     .education-block ul li {
         font-size: 0.95rem;
+    }
+
+    .about {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .about-intro {
+        padding: 0 18px;
+        text-align: left;
+    }
+
+    .portfolio-wrapper {
+        padding: 0 40px;
+    }
+
+    .portfolio-card {
+        flex: 0 0 80vw;
+        max-width: 80vw;
     }
 }
 /*768px landscape*/
@@ -562,8 +618,18 @@ footer .social-icon:hover {
         font-size: 20px;
         margin: 0 5px;
     }
+
     .about-content img {
-        max-width: 250px;
+        max-width: 230px;
+    }
+
+    .portfolio-wrapper {
+        padding: 0 28px;
+    }
+
+    .portfolio-card {
+        flex: 0 0 85vw;
+        max-width: 85vw;
     }
 
     .education-block h4 {
@@ -646,8 +712,8 @@ footer .social-icon:hover {
 
 a:not(footer a):not(.social-icon):not(.screenshot a) {
   display: inline-block;
-  width: 240px; 
-  text-align: center; 
+  width: min(240px, 100%);
+  text-align: center;
   color: #fff;
   background: #1d1f299c;
   padding: 10px 20px;
@@ -702,7 +768,9 @@ a:hover:not(footer a):not(.social-icon):not(.screenshot a) {
   padding: 1rem;
   transition: transform 0.3s ease;
   box-sizing: border-box;
-  max-width: 100%;
+  flex: 0 0 280px;
+  max-width: 280px;
+  scroll-snap-align: center;
 }
 
 .portfolio-card:hover {
@@ -747,6 +815,7 @@ a:hover:not(footer a):not(.social-icon):not(.screenshot a) {
   text-decoration: none;
   font-weight: bold;
   transition: background-color 0.3s ease;
+  width: min(220px, 100%);
 }
 
 .project-link:hover {
@@ -770,7 +839,9 @@ a:hover:not(footer a):not(.social-icon):not(.screenshot a) {
   overflow: hidden;
   gap: 16px;
   width: 100%;
-  
+  flex: 1;
+  min-width: 0;
+  scroll-snap-type: x mandatory;
 }
 
 
