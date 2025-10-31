@@ -45,7 +45,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function nextSlide() {
     cards = querySliderCards();
-    if (currentIndex < cards.length - visibleCards) {
+    const maxIndex = Math.max(0, cards.length - visibleCards);
+    if (currentIndex < maxIndex) {
       currentIndex++;
       updateSlider();
     }
