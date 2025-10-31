@@ -1,20 +1,22 @@
 
+const sliderUtils = window.sliderUtils;
+
+if (!sliderUtils || typeof sliderUtils.getVisibleCards !== 'function') {
+  throw new Error('sliderUtils.getVisibleCards is required for the slider to operate correctly.');
+}
+
+const { getVisibleCards } = sliderUtils;
+
 document.addEventListener('DOMContentLoaded', function () {
    // === SLIDER ===
   const slider = document.getElementById('slider');
   const prevBtn = document.getElementById('prevBtn');
   const nextBtn = document.getElementById('nextBtn');
-  let cards = []; 
+  let cards = [];
   let currentIndex = 0;
   const gap = 16;
-  let visibleCards = getVisibleCards(); 
+  let visibleCards = getVisibleCards();
   let cardWidth = 0;
-
-  function getVisibleCards() {
-    if (window.innerWidth < 600) return 1;
-    if (window.innerWidth < 1024) return 2;
-    return 3;
-  }
 
   // Helper function to query slider cards from the DOM
   function querySliderCards() {
