@@ -28,9 +28,9 @@ header {
     background: linear-gradient(135deg, #6e8efb, #a777e3);
     font-family: var(--primary-font);
     font-optical-sizing: auto;
-    font-weight: weight;
+    font-weight: 600;
     font-style: normal;
-    font-variation-settings: "BNCE" 0,"INFM" 0,"SPAC" 0;  
+    font-variation-settings: "BNCE" 0,"INFM" 0,"SPAC" 0;
     color: white;
     text-align: center;
     padding: 0.3vh 0.3vw;
@@ -56,7 +56,7 @@ header h1 {
     transition: all 0.3s ease;
 }
 .description:hover {
-    transform: translateY(-56px)ease;
+    transform: translateY(-56px);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -100,15 +100,16 @@ header h1 {
 .modal-content h2{
     font-family: var(--primary-font);
     font-optical-sizing: auto;
-    font-weight: weight;
+    font-weight: 600;
     font-style: normal;
-    font-variation-settings: "BNCE" 0,"INFM" 0,"SPAC" 0;   
+    font-variation-settings: "BNCE" 0,"INFM" 0,"SPAC" 0;
     font-size: 18px;
     margin-bottom: 15px;
     color: #fffffffa;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
 }
 .modal-content h2:hover{
-    transform: translateY(-56px)ease;
+    transform: translateY(-56px);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 .close {
@@ -118,6 +119,7 @@ header h1 {
     font-weight: bold;
     cursor: pointer;
     margin-top: -7px;
+    transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
 }
 
 .close:hover,
@@ -125,7 +127,7 @@ header h1 {
     color: #cc0000;
     text-decoration: none;
     cursor: pointer;
-    transform: translateY(56px)ease;
+    transform: translateY(56px);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 #consultation-form {
@@ -150,7 +152,7 @@ header h1 {
     border: none;
     border-radius: 45px;
     width: 150px;
-    transition: background-color 0.3s ease; /
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 #consultation-form button:hover {
     background-color: #7dea80c9;
